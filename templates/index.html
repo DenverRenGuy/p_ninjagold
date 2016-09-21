@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Gold | Coding Dojo Assignment</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <h1>Ninja Gold | How Ninja is your gold finding skillz!</h1>
+            </div>
+
+            <div class="profile">
+                <h2>Mighty Ninja's Gold: $ {{session['goldCount']}}</h2>
+                <form class="" action="/process_money" method="post">
+                    <input type="hidden" name="building" value="clear">
+                    <input type="submit" name="submit" value="Clear Game">
+                </form>
+            </div>
+            <div class="boxes">
+                <div class="gold-box farm">
+                    <h3>Farm</h3>
+                    <p>
+                        (Earn 10-20 Gold)
+                    </p>
+                    <form class="" action="/process_money" method="post">
+                        <input type="hidden" name="building" value="farm">
+                        <input type="submit" name="submit" value="Find Gold">
+                    </form>
+                </div>
+
+                <div class="gold-box cave">
+                    <h3>Cave</h3>
+                    <p>
+                        (Earn 5-10 Gold)
+                    </p>
+                    <form class="" action="/process_money" method="post">
+                        <input type="hidden" name="building" value="cave">
+                        <input type="submit" name="submit" value="Find Gold">
+                    </form>
+                </div>
+
+                <div class="gold-box house">
+                    <h3>House</h3>
+                    <p>
+                        (Earn 2-5 Gold)
+                    </p>
+                    <form class="" action="/process_money" method="post">
+                        <input type="hidden" name="building" value="house">
+                        <input type="submit" name="submit" value="Find Gold">
+                    </form>
+                </div>
+
+                <div class="gold-box casino">
+                    <h3>Casino</h3>
+                    <p>
+                        (Earn or lose up to 50 Gold)
+                    </p>
+                    <form class="" action="/process_money" method="post">
+                        <input type="hidden" name="building" value="casino">
+                        <input type="submit" name="submit" value="Find Gold">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="activitity">
+                <h4>Actvities</h4>
+                <div class="activity-list">
+                    <input type="textarea" name="name" value="">
+                </div>
+            </div>
+            <div class="footer">
+                <h6>Ninja Gold Test Game, Built for Coding Dojo &copy; 2016 Jason Wilcox</h6>
+            </div>
+        </div>
+    </body>
+</html>
