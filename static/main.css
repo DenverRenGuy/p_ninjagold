@@ -79,9 +79,17 @@ input[type=submit]{
 
 .activity-list{
     width: 80%;
-    background: #78599C;
+    background: #441877;
     border: 1px solid black;
     margin: 0 auto;
     height: 10em;
 
+}
+
+.gain{
+    color: #107652;
+}
+
+.loss{
+    color: #B04918;
 }

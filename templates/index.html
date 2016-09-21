@@ -55,7 +55,7 @@
                 <div class="gold-box casino">
                     <h3>Casino</h3>
                     <p>
-                        (Earn or lose up to 50 Gold)
+                        (Earn/lose up to 50 Gold)
                     </p>
                     <form class="" action="/process_money" method="post">
                         <input type="hidden" name="building" value="casino">
@@ -65,10 +65,12 @@
             </div>
 
 
-            <div class="activitity">
+            <div class="activity">
                 <h4>Actvities</h4>
                 <div class="activity-list">
-                    <input type="textarea" name="name" value="">
+                    {% for element in session['activitys'] %}
+                        <p class="{{element['style']}}">{{element['activity']}}</p>
+                    {% endfor %}
                 </div>
             </div>
             <div class="footer">
